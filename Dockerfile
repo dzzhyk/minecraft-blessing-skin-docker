@@ -49,7 +49,8 @@ COPY config/php.ini /etc/php81/conf.d/custom.ini
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Make sure files/folders needed by the processes are accessable when they run under the nobody user
-RUN chown -R nobody.nobody /var/www/html /run /var/lib/nginx /var/log/nginx
+RUN mkdir /data
+RUN chown -R nobody.nobody /var/www/html /run /var/lib/nginx /var/log/nginx /data
 
 # Switch to use a non-root user from here on
 USER nobody
@@ -59,7 +60,6 @@ COPY --chown=nobody blessing-skin-server/ /var/www/html/
 RUN mv .env.example .env
 RUN php artisan key:generate
 
-RUN mkdir /data
 VOLUME ["/data"]
 
 EXPOSE 8080
