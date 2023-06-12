@@ -1,6 +1,6 @@
 # blessing skin docker
 
-blessing skin docker镜像
+blessing skin docker镜像，仅50MB大小，目前提供6.0.0版本
 
 ## Usage
 
@@ -14,6 +14,9 @@ $ docker run -d --name blessing-skin -p 80:8080 -v ~/blessing-skin:/data dzzhyk/
 
 ### 手动构建镜像
 
-1. 下载blessing-skin-server-x.x.x.zip [Github Release](https://github.com/bs-community/blessing-skin-server/releases)
-2. 放置到当前项目目录下，修改[build_image.sh](build_image.sh)中的内容
-3. 执行脚本构建
+下载blessing-skin-server-x.x.x.zip [Github Release](https://github.com/bs-community/blessing-skin-server/releases)
+
+```shell
+$ unzip -q ./blessing-skin-server-6.0.0.zip -d blessing-skin-server
+$ docker build -t dzzhyk/minecraft-blessing-skin-docker:6.0.0 .
+```
