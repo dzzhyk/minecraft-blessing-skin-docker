@@ -17,6 +17,6 @@ $ docker run -d --name blessing-skin -p 80:8080 -v ~/blessing-skin:/data dzzhyk/
 下载blessing-skin-server-x.x.x.zip [Github Release](https://github.com/bs-community/blessing-skin-server/releases)
 
 ```shell
-$ unzip -q ./blessing-skin-server-6.0.0.zip -d blessing-skin-server
-$ docker build -t dzzhyk/minecraft-blessing-skin-docker:6.0.0 .
+$ unzip -q ./blessing-skin-server-6.0.2.zip -d blessing-skin-server
+$ docker build -t dzzhyk/minecraft-blessing-skin-docker:6.0.2 .
 ```
