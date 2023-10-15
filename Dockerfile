@@ -20,7 +20,6 @@ RUN apk add --no-cache \
     php81-gd \
     php81-intl \
     php81-mbstring \
-    php81-mysqli \
     php81-opcache \
     php81-openssl \
     php81-phar \
@@ -34,6 +33,8 @@ RUN apk add --no-cache \
     php81-ctype  \
     php81-fileinfo \
     php81-pdo_sqlite \
+    php81-pdo_mysql \
+    php81-pdo_pgsql \
     supervisor
 
 # Configure nginx - http
